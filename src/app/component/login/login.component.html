@@ -1,0 +1,50 @@
+<link rel="login.component.css">
+<div class="container-fluid">
+<div class ="row">
+<div class="col">
+
+<div class="col-4">
+<div class ="card shadow"> 
+
+
+    <div class="card-body">
+
+
+        <form> 
+<div class="mb-3">
+    <h1> login</h1>
+</div>  
+        <div class="mb-3">
+            <label for="formGroupExampleInput">Email</label>
+            <input type="email" class="form-control" id="formGroupExampleInput" name="email" [(ngModel)]="email" placeholder="email">
+        </div>
+        
+        <div class="mb-3">
+            <label for="formGroupExampleInput">Password </label>
+            <input type="password" class="form-control" id="formGroupExampleInput" name="password"  [(ngModel)]="password" placeholder="password">
+        </div>
+        <br>
+    <button type="button"  (click)="login()"  class="btn btn-info"> login</button>
+        <div class="row">
+            <div class="col-7">
+    <br>
+             <a [routerLink]="['/signup']"  style="text-decoration:none">    Don't have an account ? <span class="text-danger"> Signup here </span></a>
+    </div>
+    <div class="col-5">
+        <br>
+                 <a [routerLink]="['/forgot']" style="text-decoration:none" class="text-dark">   Forgot Password  ?   </a>
+
+        </div>
+
+        </div>
+        </form>
+    </div>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
