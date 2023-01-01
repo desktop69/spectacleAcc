@@ -1,0 +1,38 @@
+<h1 style="text-align: center;"> Edit a Show </h1>
+<form class="row g-3" style="margin:20px ;padding:20px; margin-top:2cm ;"   [formGroup]="formvalue" >
+    <div class="col-md-6">
+      <label   class="form-label">Name</label>
+      <input    required class="form-control"  formControlName="name" id="name" placeholder="{{current.noms}}" [value]="current.noms">
+    
+    </div>
+    <div    class="col-md-6">
+      <label   class="form-label">Date</label>
+      <input  formControlName="date"  class="form-control" id="date" required="" placeholder="{{current.date}}">
+    
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input  formControlName="adr"  class="form-control" id="address" required="" placeholder="{{current.adresse}}">
+     
+   
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Description</label>
+      <input formControlName="desc"  type="text" class="form-control" id="desc"   placeholder="{{current.desc}}">
+    </div>
+  
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Numbre of Places Available</label>
+      <input type="text" class="form-control" id="nb" >
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Image path</label>
+      <input formControlName="imgadr"  type="text" class="form-control"  id="imgadr" placeholder="Image path here  here" required="">  
+    </div>
+     
+    <div   style="margin-top: 1cm;" class="col-md-12 text-center" > 
+        <button  type="submit" class="btn btn-info btn-lg" (click)="update()"  >edit  show ! </button>
+    </div>
+  </form>
+  

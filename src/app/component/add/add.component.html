@@ -1,0 +1,37 @@
+<h1 style="text-align: center;"> Add a Show </h1>
+<form class="row g-3" style="margin:20px ;padding:20px; margin-top:2cm ;"  [formGroup]="formvalue">
+    <div class="col-md-6">
+      <label   class="form-label">Name</label>
+      <input formControlName="name" required class="form-control" id="name" >
+      <small  *ngIf="formvalue.get('name')?.invalid && formvalue.get('name')?.touched" class="text-danger">  name is Required ! </small>
+    </div>
+    <div    class="col-md-6">
+      <label   class="form-label">Date</label>
+      <input  formControlName="date" class="form-control" id="date" required="">
+      <small  *ngIf="formvalue.get('date')?.invalid && formvalue.get('date')?.touched" class="text-danger">  date is Required ! </small>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address</label>
+      <input formControlName="address"  type="text" class="form-control"  id="address" placeholder="1234 Main St" required="">  
+      <small  *ngIf="formvalue.get('address')?.invalid && formvalue.get('adresse')?.touched" class="text-danger">  Adresse is Required ! </small>
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Description</label>
+      <input formControlName="desc"  type="text" class="form-control"  id="desc" placeholder="Description here" required="">  
+    </div>
+  
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Numbre of Places Available</label>
+      <input type="text" class="form-control" id="nb">
+    </div>
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Image path</label>
+      <input formControlName="imgadr"  type="text" class="form-control"  id="imgadr" placeholder="Image path here  here" required="">  
+    </div>
+     
+    <div   style="margin-top: 1cm;" class="col-md-12 text-center" > 
+        <button  type="submit" class="btn btn-info btn-lg" (click)="addstudent()" >Add show ! </button>
+    </div>
+  </form>
+  

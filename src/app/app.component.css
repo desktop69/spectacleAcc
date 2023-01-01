@@ -1,0 +1,17 @@
+body{
+
+    transform: scale(1); /* Standard Property */
+    transform-origin: 0 0;
+    background-color:    #989898;
+    color: #989898;
+}
+.navbar ul {
+    list-style-type: none;
+    padding: 3;
+    margin-right: 12cm;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap; /* assumes you only want one row */
+  }

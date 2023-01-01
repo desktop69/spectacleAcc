@@ -1,0 +1,36 @@
+<h1 style="text-align: center;"> These are the details of the show ! </h1>
+<form class="row g-3" style="margin:20px ;padding:20px; margin-top:2cm ;"   [formGroup]="formvalue" >
+    <div class="col-md-6">
+      <label   class="form-label">Name:</label>
+      <!-- <input    required class="form-control"  formControlName="name" id="name"  [value]="current.noms"> -->
+      <span>   {{current.noms}} </span>
+    
+    </div>
+    <div    class="col-md-6">
+      <label   class="form-label">Date:</label>
+      <!-- <input  formControlName="date"  class="form-control" id="date" required="" placeholder="{{current.date}}"> -->
+      <span>   {{current.date}} </span>
+    </div>
+    <div class="col-12">
+      <label for="inputAddress" class="form-label">Address:</label>
+      <!-- <input  formControlName="adr"  class="form-control" id="address" required="" placeholder="{{current.adresse}}"> -->
+      <span>   {{current.adresse}} </span>
+   
+    </div>
+    
+    <div class="col-md-6">
+      <label for="inputCity" class="form-label">Description</label>
+      <span>   {{current.desc}} </span>
+      <!-- <input  type="text" class="form-control" id="description"> -->
+    </div>
+  
+    <div class="col-md-2">
+      <label for="inputZip" class="form-label">Numbre of Places Available</label>
+      <input type="text" class="form-control" id="nb" >
+    </div>
+     
+    <div   style="margin-top: 1cm;" class="col-md-12 text-center" > 
+      <a  [routerLink]="['/dashboard']"  > <button  type="submit" class="btn btn-info btn-lg"  >Go back </button> </a>
+    </div>
+  </form>
+  

@@ -1,1 +1,23 @@
-<p>verifyemail works!</p>
+<div class="displayTable">
+    <div class="displayTableCell">
+      <div class="authBlock">
+        <h3>Thank You for Registering</h3>
+        <div class="formGroup" *ngIf="auth.userData as user">
+          <p class="text-center">Your email is :  <strong>{{user.email}}</strong>.</p>
+          <p class="text-center"  *ngIf="auth.isVerified==false " >Please check your email and click on the link to verfiy your email address.</p>
+          <p class="text-center"  *ngIf="auth.isVerified==true " >You Already Verified your account ! .</p>
+        </div>
+        
+        <!-- Calling SendVerificationMail() method using authService Api -->
+        <div class="formGroup">
+          <button *ngIf="auth.isVerified==false " type="button" class="btn btnPrimary" (click)="auth.SendVerificationMail()">
+            <i class="fas fa-redo-alt"></i>
+            Resend Verification Email
+          </button>
+        </div>
+      </div>
+      <div class="redirectToLogin">
+        <span>Go back to?<span class="redirect" [routerLink]="['/home']"> Home</span></span>
+      </div>
+    </div>
+  </div>

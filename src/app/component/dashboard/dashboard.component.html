@@ -1,0 +1,30 @@
+<h1>Events</h1>
+<h2 > <a   [routerLink]="['/add']"> You can add a show here </a>  </h2>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">ID</th>
+              <th scope="col">Nom du Spectacle</th>
+              <th scope="col">Adresse</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let data of allstudentdata">
+              <th scope="row">1</th>
+              <td>{{data._id}}</td>
+              <td>{{data.noms}}</td>
+              <td>{{data.adresse}}</td>
+              <td>{{data.date}}</td>
+              <td><button class="btn btn-success btn-lg"   [routerLink]="['/edit',data._id]"  > Edit </button></td>
+                  <td><button class="btn btn-danger btn-lg" (click)="del(data)">Delete  </button></td>
+                  <!-- <td><button class="btn btn-info btn-lg "   (click)="getuser(data)">  Show</button></td> -->
+                  <td><button class="btn btn-info btn-lg"   [routerLink]="['/show',data._id]"  > Show </button></td>
+                  
+            </tr>
+            
+            
+          </tbody>
+        </table>

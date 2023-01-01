@@ -1,34 +1,51 @@
-<link rel="login.component.css">
-<div class="container-fluid">
-<div class ="row">
-<div class="col">
+ 
+ <link rel="signupcomponent.css">
+ <style>
+ 
 
-<div class="col-4">
-<div class ="card shadow"> 
+ </style>
+ <div  class=" h-100 d-flex justify-content-center align-items-center"> 
+ <div>
+
+   
+ 
+<div class="container-fluid mx-auto "> 
+<div class ="row  mx-auto ">
+<div class="col  mx-auto">
+
+<div class="col-13">
+<div    style="transform: translate(-50%,-0%);" class ="card  shadow mx-auto"> 
 
 
-    <div class="card-body">
+    <div class="card-body mx-auto" >
 
 
         <form> 
 <div class="mb-3">
+  <br>    
+ 
     <h1> Signup</h1>
 </div>  
         <div class="mb-3">
             <label for="formGroupExampleInput">Email</label>
             <input type="email" class="form-control" name="email" id="formGroupExampleInput" [(ngModel)]="email" placeholder="email">
         </div>
-        
+    
         <div class="mb-3">
             <label for="formGroupExampleInput" >Password </label>
             <input type="password" class="form-control" name="password"id="formGroupExampleInput" [(ngModel)]="password" placeholder="password">
+        </div>
+ 
+        <div class="mb-3">
+            <label for="formGroupExampleInput" >Verify Password </label>
+            <input type="password" class="form-control" name="password"id="formGroupExampleInput" [(ngModel)]="password2" placeholder="password">
         </div>
         <br>
     <button type="button"  (click)="signup()"  class="btn btn-info"> Signup</button>
         <div class="row">
             <div class="col-7">
     <br>    
-             <a [routerLink]="['/login']"  style="text-decoration:none">   Already  have an account ? <span class="text-danger"> Signin here </span></a>
+            <a [routerLink]="['/login']"  style="text-decoration:none">   Already  have an account ? <span class="text-danger"> Signin here </span></a>
     </div>
     <div class="col-5">
         <br>
